@@ -1,0 +1,27 @@
+.login_conn
+{
+    background-image: linear-gradient(rgba(34, 17, 54, 0.9),rgba(0, 0, 0, 0.9)) , url(./assets/img/bg.png);
+    height: 965px;
+    overflow: auto;
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login_conn > .login_form
+{
+    background-color: var(--color-black);
+    padding: 3%;
+    border: solid 2px var(--color-purple);
+    border-radius: 10px;
+}
+
+.login_conn > .bi-person-video2
+{
+    color: var(--color-white);
+    font-size: 500%;
+}
