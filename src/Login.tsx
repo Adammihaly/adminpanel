@@ -6,7 +6,7 @@ function Login() {
         <div className='login_conn'>
             <div className='login_form'>
                 <i className="bi bi-person-video2"></i>
-                <h1>Bejelentkezés</h1>
+                <h1>Admin bejelentkezés</h1>
                 <form action="" method="">
                     <label>Felhasználónév vagy Email cím</label><br/>
                     <input type="text" name="felhasznalonev" placeholder="Felhasználónév vagy Email cím" /><br/>	

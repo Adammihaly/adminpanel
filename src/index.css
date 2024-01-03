@@ -8,7 +8,7 @@
   font-weight: lighter;
 }
 
-a:hover, a
+a:hover, a, button:hover, button
 {
 	transition: 0.4s;
 }
