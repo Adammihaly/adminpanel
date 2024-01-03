@@ -1,0 +1,46 @@
+.login_conn p
+{
+    max-width: 50vw;
+    text-wrap: balance;
+    font-size: 1vw;
+    font-family: var(--font-sec);
+    margin-bottom: 4%;
+}
+
+.login_conn .QRCode
+{
+    width: 20%;
+    margin-bottom: 4%;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .login_conn p
+    {
+        max-width: 60vw;
+        font-size: 3vw;
+    }
+    
+    .login_conn .QRCode
+    {
+        width: 30%;
+        margin-bottom: 2%;
+    }   
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .login_conn p
+    {
+        max-width: 80vw;
+        font-size: 3.5vw;
+    }
+    
+    .login_conn .QRCode
+    {
+        width: 30%;
+        margin-bottom: 2%;
+    }   
+
+}
