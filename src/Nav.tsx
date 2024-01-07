@@ -3,6 +3,8 @@ import './nav.css';
 import Home from './Home';
 import Posts from './Posts';
 
+document.title = 'Uj title';
+
 const Nav: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<string | null>(null);
 
