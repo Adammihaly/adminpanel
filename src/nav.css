@@ -1,0 +1,47 @@
+.grid
+{
+    display: grid;
+    grid-template-columns: 18% 82%;
+}
+
+.links
+{
+    background-color: var(--color-black);
+    text-align: left;
+    color: white;
+    height: 100dvh;
+    font-family: var(--font-sec);
+    border-right: solid 2px var(--color-black);
+    position: sticky;
+    top: 0;
+
+    .link
+    {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5vw;
+        padding: 5% 0 5% 2%;
+        display: block;
+        border-top: solid 2px white;
+        transition: 0.3s;
+    }
+
+    .link:last-child
+    {
+        border-bottom: solid 2px white;
+    }
+
+    .link:hover
+    {
+        background-color: var(--color-white);
+        color: var(--color-black);
+        transition: 0.4s;
+    }
+
+    .active
+    {
+        background-color: var(--color-white);
+        color: var(--color-black);
+    }
+
+}

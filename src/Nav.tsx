@@ -1,31 +1,27 @@
-import React, { useState } from 'react';
 import './nav.css';
 import Home from './Home';
 import Posts from './Posts';
+import {Link, NavLink, Route, Routes} from 'react-router-dom';
 
-document.title = 'Uj title';
-
-const Nav: React.FC = () => {
-  const [selectedTab, setSelectedTab] = useState<string | null>(null);
-
-  const handleTabClick = (tab: string) => {
-    setSelectedTab(tab);
-  };
-
+function Nav () 
+{
   return (
-    <div>
-      <div className='nav_conn'>
-        <span onClick={() => handleTabClick('home')}>Kezdőlap</span><br />
-        <span onClick={() => handleTabClick('posts')}>Posztok kezelése</span><br />
-        <span onClick={() => handleTabClick('admin')}>Adminisztráció</span><br />
-        <span onClick={() => handleTabClick('logs')}>Naplózás</span><br />
-        <span onClick={() => handleTabClick('logout')}>Kilépés</span><br />
+    <>
+    <div className='grid'>
+      <div className='links'>
+        <NavLink to='/' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Home</NavLink>
+        <NavLink to='/posts' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Posts</NavLink>
+        <NavLink to='/admin' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Adminisztracio</NavLink>
+        <NavLink to='/team' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Team</NavLink>
       </div>
-      <div>
-        {selectedTab === 'home' && <Home />}
-        {selectedTab === 'posts' && <Posts />}
+      <div className='right'>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/posts' element={<Posts />} />
+        </Routes>
       </div>
     </div>
+    </>
   );
 }
 
