@@ -4,6 +4,16 @@
     grid-template-columns: 18% 82%;
 }
 
+.mobile_menu
+{
+    display: none;
+}
+
+.links_mobile
+{
+    display: none;
+}
+
 .links
 {
     background-color: var(--color-black);
@@ -45,3 +55,178 @@
     }
 
 }
+
+@media only screen and (max-width: 700px) {
+
+.grid
+{
+    display: block;
+}
+
+.links
+{
+    display: none;
+}
+
+.links_mobile
+{
+    background-color: var(--color-black);
+    text-align: left;
+    color: white;
+    height: 100dvh;
+    font-family: var(--font-sec);
+    border-right: solid 2px var(--color-black);
+    position: sticky;
+    top: 0;
+
+    .link
+    {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5vw;
+        padding: 5% 0 5% 2%;
+        display: block;
+        border-top: solid 2px white;
+        transition: 0.3s;
+    }
+
+    .link:last-child
+    {
+        border-bottom: solid 2px white;
+    }
+
+    .link:hover
+    {
+        background-color: var(--color-white);
+        color: var(--color-black);
+        transition: 0.4s;
+    }
+
+    .active
+    {
+        background-color: var(--color-white);
+        color: var(--color-black);
+    }
+
+}
+
+.mobile_menu
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: unset;
+    color: white;
+    border: none;
+
+        & i
+        {
+            font-size: 250%;
+            cursor: pointer;
+        }
+
+}
+
+.mobile_menu_close
+    {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: unset;
+        margin-left: 52vw;
+        color: white;
+        border: none;
+    
+            & i
+            {
+                font-size: 250%;
+                cursor: pointer;
+            }
+     
+    }
+
+    .links_mobile
+    {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50vw;
+        z-index: 10;
+    
+        .link
+        {
+            font-size: 2vw;
+        }
+    
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+    .grid
+    {
+        display: block;
+    }
+    
+    .mobile_menu
+    {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        background-color: unset;
+        color: white;
+        border: none;
+    
+            & i
+            {
+                font-size: 250%;
+                cursor: pointer;
+            }
+    
+    }
+
+    .mobile_menu_close
+    {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: unset;
+        margin-left: 77vw;
+        color: white;
+        border: none;
+    
+            & i
+            {
+                font-size: 250%;
+                cursor: pointer;
+            }
+     
+    }
+    
+        .links_mobile
+        {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 75vw;
+            z-index: 10;
+        
+            .link
+            {
+                font-size: 3vw;
+            }
+        
+        }
+    
+    }
