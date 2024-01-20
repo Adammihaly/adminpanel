@@ -1,0 +1,21 @@
+.posts_conn
+{
+    background-color: var(--color-purple);
+    background-image: linear-gradient(rgba(41, 3, 36, 0.9),rgba(0, 0, 0, 1)) , url(./assets/img/bg.png);
+    text-align: center;
+    background-size: cover;
+    min-height: 100dvh;
+    color: white;
+    padding: 5%;
+    box-sizing: border-box;
+
+
+        & h1
+        {
+            font-family: var(--font-main);
+            font-size: 4vw;
+            margin-bottom: 3%;
+        }
+
+        
+}
