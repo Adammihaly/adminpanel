@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import Post_item from './Post_item.tsx'
 import './posts.css';
 
 function Post()
 {
+
+    const [showDiv, setShowDiv] = useState<boolean>(false);
+
+    const megseButtonClick = () => {
+        setShowDiv(false);
+    };
+
     return(
         <>
             <div className="posts_conn">
                 <h1>Posztok</h1>
                 <div className="posts_grid">
-                    <div className="post">
-                        <div className="post_data">
-                            <h2>58472</h2>
-                            <h3>Minecraft</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur odit error illo enim ducimus magnam alias cum fugit, iste repellat, dolore, culpa veritatis ipsum animi tempora repudiandae. Quidem, molestias quasi!</p>
-                            <h4>2024.01.22</h4>
-                        </div>
-                        <div className="post_act">
-                            
-                        </div>
+                    <Post_item showDiv={showDiv} setShowDiv={setShowDiv} />
+                </div>
+                <div className="wrapper" style={{  display: showDiv ? 'flex' : 'none' } }>
+                    <div className="popupdel">
+                        <h2>Indokold meg a törlést</h2>
+                        <form>
+                            <input type="text" name="indok" placeholder="Indok" /><br />
+                            <button>Végleges törlés</button><br />
+                        </form> 
+                        <button onClick={megseButtonClick}>Mégse</button>
                     </div>
                 </div>
             </div>
