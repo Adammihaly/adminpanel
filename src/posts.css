@@ -2,6 +2,7 @@
 {
     background-color: var(--color-purple);
     background-image: linear-gradient(rgba(41, 3, 36, 0.9),rgba(0, 0, 0, 1)) , url(./assets/img/bg.png);
+    background-attachment: fixed;
     text-align: center;
     background-size: cover;
     min-height: 100dvh;
@@ -45,6 +46,22 @@
                     {
                         font-size: 150%;
                         margin-bottom: 1%;
+                    }
+
+                    & h5
+                    {
+                        font-size: 120%;
+                        margin-bottom: 1%;
+                        color: red;
+                        font-weight: bold;
+                    }
+
+                    & h6
+                    {
+                        font-size: 120%;
+                        margin-bottom: 1%;
+                        color: yellow;
+                        font-weight: bold;
                     }
 
                     & h3
@@ -101,7 +118,35 @@
                 border: solid 2px #fff;
                 border-radius: 10px;
 
-                
+                & h2
+                {
+                    font-family: var(--font-sec);
+                    font-size: 200%;
+                    margin-bottom: 25%;
+                }
+
+                & input
+                {
+                    font-family: var(--font-sec);
+                    font-size: 120%;
+                    padding: 3%;
+                    margin-bottom: 10%;
+                    border-radius: 15px;
+                    width: 100%;
+                }
+
+                & button
+                {
+                    background-color: var(--color-purple);
+                    color: #fff;
+                    border-radius: 10px;
+                    padding: 3%;
+                    border: solid 2px #fff;
+                    font-family: var(--font-sec);
+                    cursor: pointer;
+                    margin-bottom: 5%;
+                    font-size: 120%;
+                }
 
         }
 
@@ -117,9 +162,5 @@
             align-items: center;
             justify-content: center;
         }
-        
-
-
-
-        
+         
 }
