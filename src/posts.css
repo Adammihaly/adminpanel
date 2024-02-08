@@ -164,3 +164,224 @@
         }
          
 }
+
+@media only screen and (max-width: 1000px) {
+
+    .posts_conn
+{
+    padding: 10%;
+
+        & h1
+        {
+            font-size: 6vw;
+            margin-bottom: 5%;
+        }
+
+        .posts_grid
+        {
+            .post
+            {
+                padding: 4%;
+                border-radius: 10px;
+                margin-bottom: 5%;
+
+                grid-template-columns: 83% 17%;
+
+                .post_data
+                {
+                    & h2
+                    {
+                        font-size: 130%;
+                        margin-bottom: 3%;
+                    }
+
+                    & h5
+                    {
+                        font-size: 100%;
+                        margin-bottom: 3%;
+                    }
+
+                    & h6
+                    {
+                        font-size: 100%;
+                        margin-bottom: 3%;
+                    }
+
+                    & h3
+                    {
+                        font-size: 140%;
+                        margin-bottom: 2%;
+                    }
+
+                    & p
+                    {
+                        font-size: 90%;
+                        margin-bottom: 2%;
+                    }
+
+                    & h4
+                    {
+                        font-size: 70%;
+                    }
+
+                }
+                .post_act
+                {
+                    gap: 20%;
+
+                    & button
+                    {
+                        border-radius: 5px;
+                        padding: 5%;
+                    }
+
+                }
+
+            }
+
+        }
+        .popupdel
+        {
+                padding: 10% 10% 10% 10%;
+
+                & h2
+                {
+                    font-size: 150%;
+                    margin-bottom: 25%;
+                }
+
+                & input
+                {
+                    font-size: 100%;
+                    padding: 4%;
+                    border-radius: 10px;
+                }
+
+                & button
+                {
+                    border-radius: 10px;
+                    padding: 5%;
+                    margin-bottom: 10%;
+                    font-size: 100%;
+                }
+
+        }        
+}
+
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .posts_conn
+{
+    padding: 10%;
+
+        & h1
+        {
+            font-size: 10vw;
+            margin-bottom: 20%;
+        }
+
+        .posts_grid
+        {
+            .post
+            {
+                padding: 4%;
+                border-radius: 10px;
+                margin-bottom: 15%;
+
+                grid-template-columns: 1fr;
+
+                .post_data
+                {
+
+                    margin-bottom: 10%;
+
+                    & h2
+                    {
+                        font-size: 130%;
+                        margin-bottom: 3%;
+                    }
+
+                    & h5
+                    {
+                        font-size: 100%;
+                        margin-bottom: 3%;
+                    }
+
+                    & h6
+                    {
+                        font-size: 100%;
+                        margin-bottom: 3%;
+                    }
+
+                    & h3
+                    {
+                        font-size: 140%;
+                        margin-bottom: 2%;
+                    }
+
+                    & p
+                    {
+                        font-size: 90%;
+                        margin-bottom: 2%;
+                    }
+
+                    & h4
+                    {
+                        font-size: 70%;
+                    }
+
+                }
+                .post_act
+                {
+                    gap: 0%;
+
+                    & button
+                    {
+                        border-radius: 5px;
+                        padding: 3%;
+                    }
+
+                }
+
+            }
+
+        }
+        .popupdel
+        {
+                padding: 10% 10% 10% 10%;
+
+                & h2
+                {
+                    font-size: 120%;
+                    margin-bottom: 10%;
+                }
+
+                & input
+                {
+                    font-size: 100%;
+                    padding: 2%;
+                    border-radius: 7px;
+                }
+
+                & button
+                {
+                    border-radius: 6px;
+                    padding: 3%;
+                    margin-bottom: 10%;
+                    font-size: 100%;
+                }
+
+        } 
+        
+        .wrapper
+        {
+            position: fixed;
+        }
+
+}
+
+}

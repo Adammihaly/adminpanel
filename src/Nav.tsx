@@ -26,14 +26,14 @@ function Nav ()
       <div className='links_mobile' style={{  display: showDiv ? 'block' : 'none' } }>
         <NavLink to='/' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Kezdőlap</NavLink>
         <NavLink to='/posts' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Posztok</NavLink>
-        <NavLink to='/admin' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Adminisztracio</NavLink>
+        <NavLink to='/admin' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Adminisztració</NavLink>
         <NavLink to='/team' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Team</NavLink>
       </div>
 
       <div className='links'>
         <NavLink to='/' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Kezdőlap</NavLink>
         <NavLink to='/posts' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Posztok</NavLink>
-        <NavLink to='/admin' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Adminisztracio</NavLink>
+        <NavLink to='/admin' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Adminisztració</NavLink>
         <NavLink to='/team' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Team</NavLink>
       </div>
 
@@ -41,6 +41,7 @@ function Nav ()
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/posts' element={<Posts />} />
+          <Route path='/admin' element={<Posts />} />
         </Routes>
       </div>
     </div>
