@@ -5,6 +5,16 @@ import './posts.css';
 function Post()
 {
 
+    const [selectedOption, setSelectedOption] = useState('');
+    const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => { 
+        setSelectedOption(e.target.value);
+    }
+
+    const [selectedOptionDel, setSelectedOptionDel] = useState('');
+    const handleSelectChangeDel = (e: React.ChangeEvent<HTMLSelectElement>) => { 
+        setSelectedOptionDel(e.target.value);
+    }
+
     const [showDiv, setShowDiv] = useState<boolean>(false);
 
     const megseButtonClick = () => {
@@ -36,7 +46,16 @@ function Post()
                     <div className="popupdel">
                         <h2>Indokold meg a törlést</h2>
                         <form>
-                            <input type="text" name="indok" placeholder="Indok" /><br />
+                        <select name="alapindok" onChange={handleSelectChangeDel}>
+                                <option value="" selected disabled>Válassz indokot</option>
+                                <option value="A poszt hírdetést tartalmaz">A poszt hírdetést tartalmaz</option>
+                                <option value="A poszt szidást vagy káromlást tartalmaz">A poszt szidást vagy káromlást tartalmaz</option>
+                                <option value="A poszt nem megfelelő tartalmat tartalmaz">A poszt nem megfelelő tartalmat tartalmaz</option>
+                                <option value="A poszt spamet tartalmaz">A poszt spamet tartalmaz</option>
+                                <option value="A poszt nem megfelelő kategóriába lett feltöltve">A poszt nem megfelelő kategóriába lett feltöltve</option>
+                                <option value="Egyéb">Egyéb</option>
+                            </select>
+                            {selectedOptionDel === 'Egyéb' && <input type="text" name="egyebindok" placeholder="Indok" />}<br />
                             <button>Végleges törlés</button><br />
                         </form> 
                         <button onClick={megseButtonClick}>Mégse</button>
@@ -46,7 +65,16 @@ function Post()
                     <div className="popupdel">
                         <h2>Indokold meg a felfüggesztést</h2>
                         <form>
-                            <input type="text" name="indok" placeholder="Indok" /><br />
+                        <select name="alapindok" onChange={handleSelectChange}>
+                                <option value="" selected disabled>Válassz indokot</option>
+                                <option value="A poszt hírdetést tartalmaz">A poszt hírdetést tartalmaz</option>
+                                <option value="A poszt szidást vagy káromlást tartalmaz">A poszt szidást vagy káromlást tartalmaz</option>
+                                <option value="A poszt nem megfelelő tartalmat tartalmaz">A poszt nem megfelelő tartalmat tartalmaz</option>
+                                <option value="A poszt spamet tartalmaz">A poszt spamet tartalmaz</option>
+                                <option value="A poszt nem megfelelő kategóriába lett feltöltve">A poszt nem megfelelő kategóriába lett feltöltve</option>
+                                <option value="Egyéb">Egyéb</option>
+                            </select>
+                            {selectedOption === 'Egyéb' && <input type="text" name="egyebindok" placeholder="Indok" />}<br />
                             <button>Felfüggesztés</button><br />
                         </form> 
                         <button onClick={megseButtonClick2}>Mégse</button>

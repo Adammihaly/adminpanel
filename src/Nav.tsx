@@ -1,6 +1,7 @@
 import './nav.css';
 import Home from './Home';
 import Posts from './Posts';
+import Admin from './Admin';
 import {Link, NavLink, Route, Routes} from 'react-router-dom';
 import React, { useState } from 'react';
 
@@ -27,21 +28,19 @@ function Nav ()
         <NavLink to='/' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Kezdőlap</NavLink>
         <NavLink to='/posts' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Posztok</NavLink>
         <NavLink to='/admin' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Adminisztració</NavLink>
-        <NavLink to='/team' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Team</NavLink>
       </div>
 
       <div className='links'>
         <NavLink to='/' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Kezdőlap</NavLink>
         <NavLink to='/posts' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Posztok</NavLink>
         <NavLink to='/admin' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Adminisztració</NavLink>
-        <NavLink to='/team' className={({ isActive, isPending }) => isPending ? "link" : isActive ? "link active" : "link"}>Team</NavLink>
       </div>
 
       <div className='right'>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/posts' element={<Posts />} />
-          <Route path='/admin' element={<Posts />} />
+          <Route path='/admin' element={<Admin />} />
         </Routes>
       </div>
     </div>
